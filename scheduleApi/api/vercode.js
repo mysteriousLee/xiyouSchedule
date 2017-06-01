@@ -5,12 +5,12 @@ let vercode = (req, response) => {
 	let url = "http://jwkq.xupt.edu.cn:8080/Common/GetValidateCode?time=" + time;
 	request(
 		{
-			url: url,
-			method: "GET",
-			encoding: null,
+			url : url,
+			method : "GET",
+			encoding : null,
 			Accept : "image/webp,image/*,*/*;q=0.8",
-			headers: {
-				Referer: 'http://jwkq.xupt.edu.cn:8080/Account/Login'
+			headers : {
+				"Referer": 'http://jwkq.xupt.edu.cn:8080/Account/Login'
 			}
 		}
 		,function (err,res,body){

@@ -1,11 +1,14 @@
 import Express from 'express';
 import router from '../api_router'
+import bodyParser from 'body-parser'
 
 let app = Express();
 
 app.listen(4000, () => {
     console.log('server running http://localhost:4000');
 });
+
+global.info = null;
 
 app.use((req, res, next) => {
 	res.header('Access-Control-Allow-Origin', req.headers.origin);
@@ -22,6 +25,7 @@ app.use((req, res, next) => {
         next();
     } 
 });
-
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
 
 app.use('/', router);
