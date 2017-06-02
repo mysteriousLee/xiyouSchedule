@@ -36,8 +36,9 @@ let login = (req, res) => {
 	    		res.json(stdRes('Server Error',-1,{}));
 	    		return;
 	    	}
+	    	global.login = 1;
 	    	let bodyJson = JSON.parse(body);
-	    	console.log(bodyJson);
+	    	//console.log(bodyJson);
 	    	for(let item in bodyJson){
 	    		if (item == 'IsSucceed' && bodyJson[item]) {
 	    			let info = {};

@@ -54,6 +54,18 @@
                         },
                         url: "http://localhost:4000/getInfo"
                     });
+                    console.log(1111);
+                    $.ajax({
+                        type: 'POST',
+                        dataType: 'json',
+                        data: {
+                            session: student.session,
+                        },
+                        success: function(data){
+                            console.log(data);
+                        },
+                        url: "http://localhost:4000/getSchedule"
+                    });
                 },
                 url: "http://localhost:4000/login"
             });

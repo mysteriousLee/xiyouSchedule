@@ -9,7 +9,7 @@ app.listen(4000, () => {
 });
 
 global.info = null;
-
+global.login = 0;
 app.use((req, res, next) => {
 	res.header('Access-Control-Allow-Origin', req.headers.origin);
     res.header(

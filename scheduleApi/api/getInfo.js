@@ -1,10 +1,12 @@
 import stdRes from '../stdRes.js'
 import request from 'request'
-import cheerio from 'cheerio'
-import iconv from 'iconv-lite'
 
 let getInfo = (req, res) => {
-	if(global.info) {
+	if(!global.login) {
+		res.json(stdRes('please login',-1,{}));
+		return;
+	}
+	else if(global.info) {
 		res.json(stdRes('Success',0,{info : global.info}));
 		return;
 	}
