@@ -3,6 +3,7 @@ import vercode from './api/vercode'
 import login from './api/login'
 import getInfo from './api/getInfo'
 import getSchedule from './api/getSchedule'
+import getAttend from './api/getAttendlist'
 
 let router = Express.Router();
 
@@ -17,4 +18,7 @@ router.use('/getInfo', getInfo);
 
 //获取课表
 router.use('/getSchedule', getSchedule);
+
+//获取考勤表
+router.use('/getAttendlist', getAttend);
 export default router;

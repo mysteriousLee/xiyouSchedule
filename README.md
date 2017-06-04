@@ -47,7 +47,7 @@
 {
    "errcode" : 0,
    "errmsg" : "Success",
-   "semester" : "2016-2017-2"
+   "semester" : "2016-2017-2",
    "class" : {
          [
             "buildname" : "长安校区东区逸夫楼",
@@ -59,6 +59,39 @@
             "week" : "3"
          ],
          ......
+   }
+}
+
+```
+
+
+### 5.Address : localhost:4000/getAttendlist 参数 :  session(是 IP/vercode 返回的session 必填)monthDay(是从当日和往前推一个月的时间字符串 比如2017-05-05a2017-06-04) method ： POST/JSON 返回 :
+
+```javascript
+{
+   "errcode" : 0,
+   "errmsg" : "Success",
+   "total" : 32,//总共课堂记录
+   "allClass" : {
+         [
+            "absence" : 7,
+            "attend" : 20,
+            "attendance" : 0,
+            "classname" : "编译原理",
+            "late" : 0,
+            "shouldattend" : 27,
+            "total" : 31
+         ],
+         ......
+   },
+   "attendlist" : {
+         [
+            "classname" : "编译原理",
+            "classno" : "1-2",
+            "classname" : "FZ310",
+            "status" : 1,//1表示正常签到，2表示请假，3表示缺勤
+            "time" : "2017-05-05"
+         ]
    }
 }
 
