@@ -101,7 +101,7 @@ function getAttendlist(session, monthDay, res) {
 	returnResult(res);
 }
 
-function getEverypage(i,monthDay,session) {//2017-05-05a2017-06-04
+function getEverypage(i,monthDay,session) {
 	let url = "http://jwkq.xupt.edu.cn:8080/User/getAttendList";
 	let model = {
 		'WaterDate' : monthDay,

@@ -23,6 +23,25 @@
                     student.session = data.session;
     			}
     		});
+            $.ajax({
+                url: 'http://localhost:4000/getcurrentRoom',
+                type: 'POST',
+                data: {
+                    id: 163
+                },
+                dataType: 'json',
+                success: function(data){
+                    console.log(data);
+                }
+            });
+             $.ajax({
+                url: 'http://localhost:4000/getbuildList',
+                type: 'POST',
+                dataType: 'json',
+                success: function(data){
+                    console.log(data);
+                }
+            });
     	}
         var student = {
             username: '',

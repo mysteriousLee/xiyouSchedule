@@ -1,6 +1,6 @@
 ## 西邮课表API
 
-#### Create by lilu Power by Nodejs
+#### Created by lilu Power by Nodejs
 
 ### 1.Address : localhost:4000/vercode 参数 : 无 method ： GET/JSON 返回 :
 
@@ -92,8 +92,71 @@
             "status" : 1,//1表示正常签到，2表示请假，3表示缺勤
             "time" : "2017-05-05"
          ]
+         ......
    }
 }
 
 ```
 
+### 6.Address : localhost:4000/getbuildList 参数 : 无 method ： POST/JSON 返回 :
+
+```javascript
+{
+   "errcode" : 0,
+   "errmsg" : "success",
+   "buildList" : {
+         [
+            "buildName" : "雁塔校区18层楼",
+            "id" : 164
+         ],
+         [
+            "buildName" : "长安校区西区基础教学B楼",
+            "id" : 166
+         ]
+         ......
+   }
+}
+
+```
+
+### 7.Address : localhost:4000/getcurrentRoom 参数 : id(是IP/getbuildList返回的id,查哪栋教学楼传入其对应的参数) method ： POST/JSON 返回 :
+
+```javascript
+{
+   "errcode" : 0,
+   "errmsg" : "success",
+   "roomList" : {
+         "FF203" : {
+            "0" : {
+               "count" : 160,//教室容纳人数
+               "roomnum" : "FF203",
+               "time" : "5-6"
+            },
+            "1" : {
+               "count" : 160,
+               "roomnum" : "FF203",
+               "time" : "3-4"
+            }
+         },
+         "FF205" : {
+            "0" : {
+               "count" : 160,
+               "roomnum" : "FF205",
+               "time" : "5-6"
+            },
+            "1" : {
+               "count" : 160,
+               "roomnum" : "FF205",
+               "time" : "1-2"
+            },
+            "2" : {
+               "count" : 160,
+               "roomnum" : "FF205",
+               "time" : "3-4"
+            }
+         }
+         ......
+   }
+}
+
+```
