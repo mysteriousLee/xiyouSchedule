@@ -2,7 +2,7 @@
 
 #### Created by lilu Power by Nodejs
 
-### 1.Address : localhost:4000/vercode 参数 : 无 method ： GET/JSON 返回 :
+### 1.Address : localhost:4000/vercode 参数 : 无 method ： GET/POST/JSON 返回 :
 
 ```javascript
 {
@@ -24,7 +24,7 @@
 
 ```
 
-### 3.Address : localhost:4000/getInfo 参数 : 无 method ： GET/JSON 返回 :
+### 3.Address : localhost:4000/getInfo 参数 : 无 method ： GET/POST/JSON 返回 :
 
 ```javascript
 {
@@ -98,7 +98,7 @@
 
 ```
 
-### 6.Address : localhost:4000/getbuildList 参数 : 无 method ： POST/JSON 返回 :
+### 6.Address : localhost:4000/getbuildList 参数 : 无 method ： GET/POST/JSON 返回 :
 
 ```javascript
 {
@@ -160,3 +160,5 @@
 }
 
 ```
+
+#### npm start启动
