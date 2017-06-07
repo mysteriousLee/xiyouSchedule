@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>登录页面</title>
+	<meta charset="utf-8">
+</head>
+<body>
+    <img src="" id="image">
+    <input type="text" name="" id="vercode">
+    <button onclick="signUp()">sign</button>
+<script type="text/javascript" src="./js/baseAjax.js"></script>
+<script type="text/javascript">
+	  var model = {};
+	  var session = '';
+      baseAjax('GET','http://localhost:4000/vercode',model,function(data){
+      	session = data.session;
+      	document.getElementById('image').src = data.verCode;
+      });
+      function signUp() {
+      	model = {
+      		username : '04141143',
+      		password : '120888',
+      		session : session,
+      		vercode : document.getElementById('vercode').value
+      	};
+      	baseAjax('POST','http://localhost:4000/login',model,function(data){
+	      	console.log(data);
+	    });
+      }
+</script>
+</body>
+</html>
