@@ -3,30 +3,53 @@
 <head>
 	<title>登录页面</title>
 	<meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
-    <img src="" id="image">
-    <input type="text" name="" id="vercode">
-    <button onclick="signUp()">sign</button>
+    <img src="images/back.png" class="backImg">
+    <img src="images/user_portrait.png" class="titleImg"> 
+    <div class="inputStyle userId">
+        <div class="inputWhat">
+            <img src="images/man.png">
+        </div>
+        <input type="text" id="username" class="inputContent" placeholder="请输入学号">
+    </div>
+    <div class="inputStyle userPwd">
+        <div class="inputWhat">
+            <img src="images/lock.png">
+        </div>
+        <input type="password" id="password" class="inputContent" placeholder="请输入密码">
+    </div>
+    <div class="inputStyle userCode">
+        <div class="inputCode">
+            <img src="" id="codeImg" onclick="getCodeimg()">
+        </div>
+        <input type="text" class="codeContent" id="vercode">
+    </div>
+    <button type="submit" class="signIn" onclick="signUp()">Sign In</button>
 <script type="text/javascript" src="./js/baseAjax.js"></script>
 <script type="text/javascript">
-	  var model = {};
-	  var session = '';
-      baseAjax('GET','http://localhost:4000/vercode',model,function(data){
-      	session = data.session;
-      	document.getElementById('image').src = data.verCode;
+    window.onload = function(){
+        getCodeimg();
+    }
+    function signUp() {
+    	var model = {
+    		username : document.getElementById('username').value,
+    		password : document.getElementById('password').value,
+    		session : localStorage.session,
+    		vercode : document.getElementById('vercode').value
+    	};
+    	baseAjax('POST','http://localhost:4000/login',model,function(data){
+      	console.log(data);
       });
-      function signUp() {
-      	model = {
-      		username : '04141143',
-      		password : '120888',
-      		session : session,
-      		vercode : document.getElementById('vercode').value
-      	};
-      	baseAjax('POST','http://localhost:4000/login',model,function(data){
-	      	console.log(data);
-	    });
-      }
+    }
+    function getCodeimg() {
+      var model = {};
+      baseAjax('GET','http://localhost:4000/vercode',model,function(data){
+        localStorage.session = data.session;
+        document.getElementById('codeImg').src = data.verCode;
+      });
+    }
 </script>
 </body>
 </html>

@@ -1,7 +1,6 @@
 import stdRes from '../stdRes.js'
 import request from 'request'
 import cheerio from 'cheerio'
-import iconv from 'iconv-lite'
 
 
 let login = (req, res) => {
