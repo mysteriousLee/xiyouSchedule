@@ -1,0 +1,243 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 16px;
+	position: relative;
+}
+.loading{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 8rem;
+	width: 8rem;
+	margin-top: -4rem;
+	margin-left: -4rem;
+	display: none;
+}
+.headBlock{
+	height: 18%;
+	width: 100%;
+	background-color: #30425A;
+	color: #fff;
+}
+.bottomBlock{
+	width: 100%;
+	height: 82%;
+}
+.leftBlock{
+	height: 100%;
+	width: 35%;
+	float: left;
+}
+.rightBlock{
+	overflow: hidden;
+	height: 100%;
+}
+#infoName{
+	width: 100%;
+	text-align: center;
+	font-size: 4rem;
+	margin-top: 2rem;
+}
+#infoCollege{
+	width: 100%;
+	font-size: 3rem;
+	text-align: center;
+}
+#infoClass{
+	width: 100%;
+	font-size: 3rem;
+	text-align: center;
+}
+.scheduleBlock{
+	height: 100%;
+	width: 50%;
+	float: left;
+	position: relative;
+}
+.scheduleBlock img{
+	height: 8rem;
+	width: 8rem;
+	position: absolute;
+	top: 2rem;
+	left: 50%;
+	margin-left: -4rem;
+}
+.scheduleBlock p{
+	width: 100%;
+	text-align: center;
+	font-size: 2.5rem;
+	position: absolute;
+	bottom: 5rem;
+}
+.roomBlock{
+    overflow: hidden;
+	height: 100%;
+	position: relative;
+}
+.roomBlock img{
+	height: 8rem;
+	width: 8rem;
+	position: absolute;
+	top: 2rem;
+	left: 50%;
+	margin-left: -4rem;
+}
+.roomBlock p{
+	width: 100%;
+	text-align: center;
+	font-size: 2.5rem;
+	position: absolute;
+	bottom: 5rem;
+}
+table{
+	height: 100%;
+	width: 100%;
+	border-collapse: collapse;
+    border-spacing: 0;
+}
+table td{
+    border:1px solid #A6A6A6;
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+}
+table td>.className{
+	position: absolute;
+	top: 1rem;
+	height: auto;
+	width: 90%;
+	margin-left: -45%;
+	left: 50%;
+	background-color: #30425A;
+	color: #fff;
+	border-radius: 1rem;
+}
+.teacherName{
+	position: absolute;
+	top: 8rem;
+	width: 100%;
+	margin-left: -50%;
+	left: 50%;
+	height: 5rem;
+}
+.teacherName>span{
+	position: absolute;
+	top: 10px;
+	left: 3.5rem;
+}
+.teacherName>img{
+	position: absolute;
+	top: 2px;
+	left: 5px;
+	height: 3.2rem;
+	width: 3.2rem;
+}
+.findRoom{
+	position: absolute;
+	top: 13rem;
+	width: 100%;
+	margin-left: -50%;
+	left: 50%;
+	height: 5rem;
+}
+.findRoom>span{
+	position: absolute;
+	top: 10px;
+	left: 4rem;
+}
+.findRoom>img{
+	position: absolute;
+	top: 2px;
+	left: 5px;
+	height: 3.2rem;
+	width: 3.2rem;
+}
+#floatdiv{
+	position: absolute;
+	top: 30rem;
+	left: 50%;
+	height: 35rem;
+	width: 70%;
+	margin-left: -35%;
+	border: 0.5rem solid #30425A;
+	border-radius: 1rem;
+	display: none;
+	background-color: #fff;
+}
+.floattop{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 5rem;
+	width: 100%;
+	background-color: #30425A;
+}
+.floattop img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 4rem;
+	width: 10%;
+}
+.floattitle{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	height: 100%;
+	width: 30%;
+	margin-left: -15%;
+	color: #fff;
+	font-size: 3rem;
+}
+#floatName{
+	position: absolute;
+	top: 6rem;
+	left: 5%;
+	height: 6rem;
+	width: 100%;
+	font-weight: bold;
+	color: #30425A;
+	font-size: 2.5rem;
+}
+#floatCode{
+	position: absolute;
+	top: 12rem;
+	left: 5%;
+	width: 95%;
+	height: 3rem;
+	color: #30425A;
+	font-size: 2.5rem;
+}
+#floatSchool{
+	position: absolute;
+	top: 16rem;
+	left: 5%;
+	width: 95%;
+	height: 3rem;
+	color: #30425A;
+	font-size: 2.5rem;
+}
+#floatRoom{
+	position: absolute;
+	top: 20rem;
+	left: 5%;
+	width: 95%;
+	height: 3rem;
+	color: #30425A;
+	font-size: 2.5rem;
+}
+#floatTeacher{
+	position: absolute;
+	top: 24rem;
+	left: 5%;
+	width: 95%;
+	height: 3rem;
+	color: #30425A;
+	font-size: 2.5rem;
+}
+

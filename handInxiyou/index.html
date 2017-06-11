@@ -3,7 +3,7 @@
 <head>
 	<title>登录页面</title>
 	<meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
     <img src="images/back.png" class="backImg">
@@ -27,29 +27,7 @@
         <input type="text" class="codeContent" id="vercode">
     </div>
     <button type="submit" class="signIn" onclick="signUp()">Sign In</button>
-<script type="text/javascript" src="./js/baseAjax.js"></script>
-<script type="text/javascript">
-    window.onload = function(){
-        getCodeimg();
-    }
-    function signUp() {
-    	var model = {
-    		username : document.getElementById('username').value,
-    		password : document.getElementById('password').value,
-    		session : localStorage.session,
-    		vercode : document.getElementById('vercode').value
-    	};
-    	baseAjax('POST','http://localhost:4000/login',model,function(data){
-      	console.log(data);
-      });
-    }
-    function getCodeimg() {
-      var model = {};
-      baseAjax('GET','http://localhost:4000/vercode',model,function(data){
-        localStorage.session = data.session;
-        document.getElementById('codeImg').src = data.verCode;
-      });
-    }
-</script>
+    <script type="text/javascript" src="./js/baseAjax.js"></script>
+    <script type="text/javascript" src="./js/login.js"></script>
 </body>
 </html>

@@ -19,7 +19,6 @@ function baseAjax() {
 		xmlhttp.send();
 	} else {
 		var str = formatParams(arguments[2]);
-		console.log(str);
 		xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 		xmlhttp.send(str);
 	}
