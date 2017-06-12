@@ -116,10 +116,11 @@ table td>.className{
 	background-color: #30425A;
 	color: #fff;
 	border-radius: 1rem;
+	font-size: 1.8rem;
 }
 .teacherName{
 	position: absolute;
-	top: 8rem;
+	top: 9rem;
 	width: 100%;
 	margin-left: -50%;
 	left: 50%;
@@ -156,6 +157,9 @@ table td>.className{
 	left: 5px;
 	height: 3.2rem;
 	width: 3.2rem;
+}
+.hiddenInfo{
+	display: none;
 }
 #floatdiv{
 	position: absolute;
