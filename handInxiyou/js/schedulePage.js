@@ -60,21 +60,18 @@ function bindFloateve(data) {
 			var val = hiddenInfo.innerHTML.split(' ');
 			var floatdiv = document.getElementById('floatdiv');
 			floatdiv.style.display = 'block';
-			var floatName = document.getElementById('floatName');
-			var floatCode = document.getElementById('floatCode');
-			var floatSchool = document.getElementById('floatSchool');
-			var floatRoom = document.getElementById('floatRoom');
-			var floatTeacher = document.getElementById('floatTeacher');
-			floatName.innerHTML = '';
-			floatCode.innerHTML = '';
-			floatSchool.innerHTML = '';
-			floatRoom.innerHTML = '';
-			floatTeacher.innerHTML = '';
-			floatName.innerHTML = '科目 : ' + val[0];
-			floatCode.innerHTML = '编号 : ' + val[1];
-			floatSchool.innerHTML = '教学楼 : ' + val[2];
-			floatRoom.innerHTML = '教室 : ' + val[3];
-			floatTeacher.innerHTML = '老师 : ' + val[4];
+			var floatObj = {
+				'0' : document.getElementById('floatName'),
+				'1' : document.getElementById('floatCode'),
+				'2' : document.getElementById('floatSchool'),
+				'3' : document.getElementById('floatRoom'),
+				'4' : document.getElementById('floatTeacher')
+			};
+			for(var item in floatObj){
+				var preVal = floatObj[item].innerHTML.split(':')[0];
+				floatObj[item].innerHTML = '';
+				floatObj[item].innerHTML = preVal + ' : ' + val[item];
+			}
 		}
 	}
 }
