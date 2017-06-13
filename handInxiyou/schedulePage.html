@@ -24,7 +24,7 @@
 			</div>
 		</div>
     </div>
-    <div class="bottomBlock">
+    <div class="bottomBlock1">
 		<table>
 			<thead>
 				<tr>
@@ -46,7 +46,7 @@
 						<!-- <div class="className"></div>
 						<div class="teacherName">
 							<img src="images/teacher.png">
-							<span>董梁梁</span>
+							<span>董梁</span>
 						</div>
 						<div class="findRoom">
 							<img src="images/find.png">
@@ -97,6 +97,52 @@
 	    		<div id="floatRoom">教室: </div>
 	    		<div id="floatTeacher">老师: </div>
 	    	</div>
+	    </div>
+    </div>
+    <div class="bottomBlock2">
+		<p class="block2Title">输入教室号查看占用情况</p>
+		<select id="buildSelect">
+			<!-- <option data-id="164">雁塔校区18层楼</option> -->
+		</select>
+	    <div class="inputRoom">
+			<input type="text" placeholder="请输入教室" id="roomNo">
+			<button id="findRoom">查询</button>
+	    </div>
+	    <table class="classTable">
+			<thead>
+				<tr>
+					<td>教室</td>
+					<td>容纳人数</td>
+					<td>节次</td>
+					<td>占用情况</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td rowspan="4" id="class_name"></td>
+					<td rowspan="4" id="class_people"></td>
+					<td>1-2节</td>
+					<td id="1-2" class="occupyClass">未占用</td>
+				</tr>
+				<tr>
+					<td>3-4节</td>
+					<td id="3-4" class="occupyClass">未占用</td>
+				</tr>
+				<tr>
+					<td>5-6节</td>
+					<td id="5-6" class="occupyClass">未占用</td>
+				</tr>
+				<tr>
+					<td>7-8节</td>
+					<td id="7-8" class="occupyClass">未占用</td>
+				</tr>
+			</tbody>
+	    </table>
+	    <div class="explainBlock">
+			<p>输入教室规范说明:</p>
+			<p>雁塔校区:雁塔A+教室或雁塔B+教室,如雁塔A101</p>
+			<p>西区A楼B楼:A+教室,如A101</p>
+			<p>东区逸夫教学楼:FF或FZ+教室,如FF205</p>
 	    </div>
     </div>
 	<script type="text/javascript" src="./js/baseAjax.js"></script>

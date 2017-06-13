@@ -79,9 +79,11 @@ let getcurrentRoom = (req, response) => {
 function simpleArray(roomList,res) {
 	let result = {};
 	result.roomList = {};
+	result.length = 0;
 	for(let item of roomList){
 		if(!result.roomList[item.roomnum]){
 			result.roomList[item.roomnum] = [];
+			result.length++;
 		}
 		let newObj = {};
 		newObj.roomnum = item.roomnum;
